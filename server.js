@@ -2,6 +2,7 @@ var express = require('express'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
+    bcrpyt = require('bcrpyt'),
     Routes = require('./routes');
 
 var app = express();
@@ -13,6 +14,8 @@ app.use(bodyParser.urlencoded({
 }), bodyParser.json());
 
 Routes(app);
+
+mongoose.connect('mongodb://localhost/coffeeclub');
 
 app.use(express.static('public'));
 

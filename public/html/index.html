@@ -14,7 +14,15 @@
   </head>
 
   <body ng-controller='coffeeCtrl as coffee'>
-    <h1>{{coffee.greeting}}</h1>
+    <ul class="nav nav-tabs nav-justified">
+      <li><a href="#/">Home</a></li>
+      <li><a href="#/about">About</a></li>
+      <li><a href="#/contact">Contact</a></li>
+      <li><a href="#/register">Register</a></li>
+    </ul>
+
+    <ng-view></ng-view>
+
 
   </body>
 </html>
