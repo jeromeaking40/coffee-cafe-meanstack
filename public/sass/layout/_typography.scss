@@ -1,15 +1,19 @@
 h1 {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: $stack-graduate;
 }
 
 a {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: $stack-graduate;
+
+    &:hover {
+        color: #FFF;
+    }
 }
 
 .about {
-    font-family: 'Josefin Slab', serif;
+    font-family: $stack-joseph;
 }
 
 p {
-    font-family: 'Pacifico', cursive;
+    font-family: $stack-pacifico;
 }

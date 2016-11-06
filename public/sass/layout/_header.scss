@@ -1,6 +1,7 @@
 .navbar-brand {
-    font-family: 'Pacifico', cursive;
-    text-shadow: brown 0.3em 0.3em 0.3em;
+    font-family: 'Graduate', cursive;
+    text-shadow: $secondary-color 0.3em 0.3em 0.3em;
+    color      : $hover-color;
 }
 
 .nav {
@@ -8,7 +9,7 @@
 }
 
 li a {
-    color: $secondary-color;
+    color: #FFF;
 
     &:hover {
         color: $hover-color;

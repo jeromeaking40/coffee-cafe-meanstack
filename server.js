@@ -2,8 +2,7 @@ var express = require('express'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    bcrpyt = require('bcrpyt'),
-    Routes = require('./routes');
+    Routes = require('./routes/routes.js');
 
 var app = express();
 
@@ -13,14 +12,17 @@ app.use(bodyParser.urlencoded({
     extended: true
 }), bodyParser.json());
 
-//Bring in routes
-Routes(app);
+
 
 //Set Mongoose Connection
 mongoose.connect('mongodb://localhost/coffeeclub');
 
+//Bring in routes
+Routes(app);
+
 //Serve Static Files
 app.use(express.static(__dirname + '/public'));
+
 
 //Server
 app.listen(3000, function(err, req, res) {

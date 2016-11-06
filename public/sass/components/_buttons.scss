@@ -1,0 +1,10 @@
+.btn {
+    font-family     : $stack-joseph;
+    background-color: $primary-color;
+    color           : $secondary-color;
+
+    &:hover {
+        background: $secondary-color;
+        color     : $primary-color;
+    }
+}
