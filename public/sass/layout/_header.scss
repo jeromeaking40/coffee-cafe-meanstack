@@ -2,3 +2,15 @@
     font-family: 'Pacifico', cursive;
     text-shadow: brown 0.3em 0.3em 0.3em;
 }
+
+.nav {
+    background-color: $primary-color;
+}
+
+li a {
+    color: $secondary-color;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
