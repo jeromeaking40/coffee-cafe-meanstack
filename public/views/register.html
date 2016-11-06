@@ -1,21 +1,48 @@
-<h2 class="text-center">Registration</h2>
-			<p class="lead text-center">Fill out the form below to register for an CoffeeClub Membership</p>
-			<!--REGISTRATION FORM-->
-			<div class="container">
-				<form class="form-signin" ng-submit="coffee.register()">
-					<h2 class="form-signin-heading">Please sign up</h2>
+<div class="jumbotronregister">
+  <div class="container">
+		<h2 class="text-center">Registration</h2>
+			<p class="lead about text-center">Fill out the form below to register for an CoffeeClub Membership</p>
+		</div>
+	</div>
 
-          <label for="exampleInputName2" class="sr-only">Name</label>
-					<input type="text" id="inputEmail" class="form-control" placeholder="Name" required autofocus>
-					<label for="inputEmail" class="sr-only">Email address</label>
-					<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-					<label for="inputPassword" class="sr-only">Password</label>
-					<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="remember-me"> Remember me
-						</label>
+			<!--REGISTRATION FORM-->
+			<!-- <div class="container"> -->
+				<div class="col-sm-1 middle-border"></div>
+				<div class="col-sm-1"></div>
+
+				<div class="col-sm-5">
+
+					<div class="form-box">
+						<div class="form-top">
+							<div class="form-top-left">
+								<h3>Sign up now</h3>
+									<p>Fill in the form below to get instant access:</p>
+							</div>
+							<div class="form-top-right">
+								<i class="fa fa-pencil"></i>
+							</div>
+							</div>
+							<div class="form-bottom">
+						<form role="form" action="" method="post" class="registration-form">
+							<div class="form-group">
+								<label class="sr-only" for="form-first-name">First name</label>
+									<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-last-name">Last name</label>
+									<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-email">Email</label>
+									<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-about-yourself">About yourself</label>
+									<textarea name="form-about-yourself" placeholder="About yourself..."
+												class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+								</div>
+								<button type="submit" class="btn">Sign me up!</button>
+						</form>
 					</div>
-					<button class="btn btn-lg btn btn-success btn-block" type="submit">Sign up</button>
-				</form>
-			</div>
+					</div>
+			<!-- </div> -->
