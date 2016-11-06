@@ -13,12 +13,16 @@ app.use(bodyParser.urlencoded({
     extended: true
 }), bodyParser.json());
 
+//Bring in routes
 Routes(app);
 
+//Set Mongoose Connection
 mongoose.connect('mongodb://localhost/coffeeclub');
 
-app.use(express.static('public'));
+//Serve Static Files
+app.use(express.static(__dirname + '/public'));
 
+//Server
 app.listen(3000, function(err, req, res) {
     if (err) {
         console.error('There was an error: ', err);

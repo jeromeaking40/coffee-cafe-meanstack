@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html ng-app="CoffeeCafe">
-  <head>
-    <meta charset="utf-8">
-    <title>Coffee Cafe</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <link rel="shortcut icon" href="/img/coffeecafe.ico" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/mainCtrl.js"></script>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Coffee Cafe</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Oswald" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+        <link rel="shortcut icon" href="/img/coffeecafe.ico" type="image/x-icon">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/mainCtrl.js"></script>
+    </head>
 
-  <body ng-controller='coffeeCtrl as coffee'>
-    <ul class="nav nav-tabs nav-justified">
-      <li><a href="#/">Home</a></li>
-      <li><a href="#/about">About</a></li>
-      <li><a href="#/contact">Contact</a></li>
-      <li><a href="#/register">Register</a></li>
-    </ul>
+    <body ng-controller='coffeeCtrl as coffee'>
+      <!--NAV-->
+      <a class="navbar-brand" href="#/">CoffeeCafe</a>
+        <ul class="nav nav-tabs nav-justified">
 
-    <ng-view></ng-view>
+            <li>
+                <a href="#/about">About</a>
+            </li>
+            <li>
+                <a href="#/contact">Contact</a>
+            </li>
+            <li>
+                <a href="#/register">Register</a>
+            </li>
+        </ul>
+        <!--END OF NAV-->
 
+        <!--PAGE CONTENT-->
+        <ng-view></ng-view>
+        <!--END OF PAGE CONTENT-->
 
-  </body>
+        <!--FOOTER-->
+        <div id="footer">
+            <footer class="navbar-default">
+                <div class="container-fluid text-center">
+                    <h5>Designed and Developed by Jerome King</h5>
+                    <a href="http://www.github.com/jeromeaking40">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="http://www.linkedin.com/in/jerome-king-7b6b8a92">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+        <!--END OF FOOTER-->
+    </div>
+
+</body>
 </html>
