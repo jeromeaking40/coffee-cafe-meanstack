@@ -8,6 +8,9 @@ function coffeeFactory($http) {
         createUser: function(newUser) {
             console.log(newUser);
             return $http.post('/register', newUser);
+        },
+        getMenu: function() {
+            return $http.get('/menu');
         }
     };
 }

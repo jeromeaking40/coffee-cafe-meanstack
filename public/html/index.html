@@ -19,8 +19,9 @@
 
     <body ng-controller='coffeeCtrl as coffee'>
       <!--NAV-->
+      <div id="wrapper">
       <a class="navbar-brand" href="#/">CoffeeCafe</a>
-        <ul class="nav nav-tabs nav-justified">
+        <ul class="nav nav-pills nav-justified">
             <li>
                 <a href="#/about">ABOUT</a>
             </li>
@@ -33,12 +34,16 @@
         </ul>
         <!--END OF NAV-->
 
+
         <!--PAGE CONTENT-->
+        <div id="content">
         <ng-view></ng-view>
         <!--END OF PAGE CONTENT-->
+      </div>
 
-        <!--FOOTER-->
-        <!-- <div id="footer">
+
+        <!-- FOOTER -->
+        <div id="footer">
             <footer class="navbar-default">
                 <div class="container-fluid text-center">
                     <h5>Designed and Developed by Jerome King</h5>
@@ -52,7 +57,7 @@
             </footer>
         </div> -->
         <!--END OF FOOTER-->
-    <!-- </div> -->
+    </div>
 
 </body>
 </html>

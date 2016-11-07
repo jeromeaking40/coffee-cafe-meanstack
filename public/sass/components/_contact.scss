@@ -52,39 +52,19 @@
     -webkit-transition: all 0.4s;
     -moz-transition   : all 0.4s;
     transition        : all 0.4s;
-}
-
-.form:hover {
-    border: 1px solid $hover-color;
+    font-family       : $stack-joseph;
 }
 
 .form:focus {
     color  : white;
     outline: none;
-    border : 1px solid $primary-color;
+    border : 1px solid $hover-color;
 }
 
 .textarea {
     height    : 200px;
     max-height: 200px;
     max-width : 100%;
-}
-/* Generic Button Styles */
-.button {
-    padding           : 8px 12px;
-    background        : #0A5175;
-    display           : block;
-    width             : 120px;
-    margin            : 10px 0 0;
-    border-radius     : 3px;
-    -webkit-transition: all 0.3s;
-    -moz-transition   : all 0.3s;
-    transition        : all 0.3s;
-    text-align        : center;
-    font-size         : 0.8em;
-    box-shadow        : 0 1px 4px rgba(0,0,0, 0.10);
-    -moz-box-shadow   : 0 1px 4px rgba(0,0,0, 0.10);
-    -webkit-box-shadow: 0 1px 4px rgba(0,0,0, 0.10);
 }
 
 .button:hover {
@@ -109,11 +89,12 @@
     box-shadow        : 0 1px 4px rgba(0,0,0, 0.10);
     -moz-box-shadow   : 0 1px 4px rgba(0,0,0, 0.10);
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0, 0.10);
+    font-family       : $stack-joseph;
 }
 
 .form-btn:hover {
-    background: #111;
-    color     : $hover-color;
+    background: $secondary-color;
+    color     : $primary-color;
     border    : none;
 }
 

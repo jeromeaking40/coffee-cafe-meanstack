@@ -1,0 +1,23 @@
+[{
+        "name": "Hot Choco",
+        "size": "12 oz / 16 oz / 20oz",
+        "price": "$2.25 / $2.55 / $2.90"
+    }, {
+        "name": "BlackSmith",
+        "size": "12 oz / 16 oz / 20oz",
+        "price": "$4.25 / $4.55 / $5.90"
+    }, {
+        "name": "Graham Cracker",
+        "size": "12 oz / 16 oz / 20oz",
+        "price": "$2.25 / $2.55 / $2.90"
+    }, {
+        "name": "San Pedro",
+        "size": "12 oz / 16 oz / 20oz",
+        "price": "$2.25 / $2.55 / $2.90"
+    }, {
+        "name": "Hazlenut",
+        "size": "12 oz / 16 oz / 20oz",
+        "price": "$2.25 / $2.55 / $2.90"
+    },
+
+]
