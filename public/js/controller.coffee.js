@@ -22,4 +22,18 @@ function coffeeController(coffeeFactory) {
         coffee.newUser = {};
 
     };
+
+    //Get Menu Information
+    coffee.cafeMenu = function() {
+        coffeeFactory.getMenu()
+            .then(function(responseData) {
+                console.log('Response is', responseData);
+                coffee.menu = responseData.data;
+                console.log(coffee.menu);
+            }, function(err) {
+                console.error('There was an err ', err);
+
+            });
+    };
+    coffee.cafeMenu();
 }

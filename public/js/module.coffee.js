@@ -18,6 +18,9 @@ function Router($routeProvider) {
         .when("/register", {
             templateUrl: "/views/register.html"
         })
+        .when("/menu", {
+            templateUrl: "/views/menu.html"
+        })
         .otherwise({
             redirectTo: "/"
         });

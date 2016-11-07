@@ -1,4 +1,5 @@
 var Users = require('../controllers/users');
+var Menu = require('../menu/menu');
 
 module.exports = function(app) {
 
@@ -8,11 +9,9 @@ module.exports = function(app) {
         });
     });
 
-
+    //Get Menu from Server
     app.get('/menu', function(req, res) {
-        res.sendFile('menu.html', {
-            root: './public/views'
-        });
+        res.send(Menu);
     });
 
     //Create New Users
