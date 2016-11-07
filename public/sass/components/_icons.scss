@@ -3,4 +3,8 @@
     padding-top: 20px;
     color      : $hover-color;
     padding-top: 20px;
+
+    &:hover {
+        color: #FFF;
+    }
 }

@@ -16,6 +16,13 @@ html {
   padding-top: 20px;
   font-size: 18px; }
 
+.menu {
+  padding-top: 20px; }
+
+h5 {
+  color: #3a2306;
+  font-family: "Josefin Slab", serif; }
+
 h1 {
   font-family: "Graduate", cursive; }
 
@@ -124,6 +131,8 @@ li a {
   padding-top: 20px;
   color: #3a2306;
   padding-top: 20px; }
+  .fa:hover {
+    color: #FFF; }
 
 .inner.container {
   padding-right: 15px;

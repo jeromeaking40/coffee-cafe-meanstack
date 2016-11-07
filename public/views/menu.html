@@ -1,15 +1,18 @@
 <div class="jumbotronmenu">
     <div class="container text-center">
         <h1>Menu</h1>
+        <p class="lead about">See all the deliciousness you can desire below</p>
     </div>
 </div>
 
-    <div class="row text-center">
-        <div class="col-md-4">
-            <ul ng-repeat="menu in coffee.menu">
-                <li>{{menu.name}}</li>
-                <li>{{menu.size}}</li>
-                <li>{{menu.price}}</li>
-            </ul>
-        </div>
-    </div>
+<div class="container text-center">
+  <section class="menu">
+
+<div ng-repeat="menu in coffee.menu">
+    <h2>{{menu.name}}</h2>
+    <p class="lead">{{menu.size}}</p>
+    <p class="lead">{{menu.price}}</p>
+</div>
+</section>
+
+</div>

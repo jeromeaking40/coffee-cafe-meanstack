@@ -18,49 +18,51 @@
     </head>
 
     <body ng-controller='coffeeCtrl as coffee'>
-      <!--NAV-->
-      <div id="wrapper">
-      <a class="navbar-brand" href="#/">CoffeeCafe</a>
-        <ul class="nav nav-pills nav-justified">
-          <li>
-              <a href="#/menu">MENU</a>
-          </li>
-            <li>
-                <a href="#/about">ABOUT</a>
-            </li>
-            <li>
-                <a href="#/contact">CONTACT</a>
-            </li>
-            <li>
-                <a href="#/register">REGISTER</a>
-            </li>
-        </ul>
-        <!--END OF NAV-->
+        <!--NAV-->
+        <div id="wrapper">
+            <a class="navbar-brand" href="#/">CoffeeCafe</a>
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="#/menu">MENU</a>
+                </li>
+                <li>
+                    <a href="#/about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#/contact">CONTACT</a>
+                </li>
+                <li>
+                    <a href="#/register">REGISTER</a>
+                </li>
+            </ul>
+            <!--END OF NAV-->
 
+            <!--PAGE CONTENT-->
+            <div id="content">
+                <ng-view></ng-view>
+                <!--END OF PAGE CONTENT-->
+            </div>
 
-        <!--PAGE CONTENT-->
-        <div id="content">
-        <ng-view></ng-view>
-        <!--END OF PAGE CONTENT-->
-      </div>
+            <!-- FOOTER -->
+            <div id="footer">
+                <footer class="navbar-default">
+                    <div class="container-fluid text-center">
+                        <h5>COFFEE CAFE, WEST TOWN WICKER PARK, 1234 N MILWAUKEE AVE, CHICAGO,IL UNITED STATES 123-456-7890 INFO@COFFEECAFE.COM</h5>
+                        <h5>Designed and Developed by Jerome King</h5>
+                        <a href="http://www.github.com/jeromeaking40">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="http://www.linkedin.com/in/jerome-king-7b6b8a92">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:jeromeaking40@yahoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+            <!--END OF FOOTER-->
+        </div>
 
-
-        <!-- FOOTER -->
-        <div id="footer">
-            <footer class="navbar-default">
-                <div class="container-fluid text-center">
-                    <h5>Designed and Developed by Jerome King</h5>
-                    <a href="http://www.github.com/jeromeaking40">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="http://www.linkedin.com/in/jerome-king-7b6b8a92">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </div>
-            </footer>
-        </div> 
-        <!--END OF FOOTER-->
-    </div>
-
-</body>
+    </body>
 </html>
