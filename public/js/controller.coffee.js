@@ -10,6 +10,7 @@ function coffeeController(coffeeFactory) {
 
     coffee.newUser = {};
 
+    //CREATE NEW USER 
     coffee.siteRegister = function() {
         coffeeFactory.createUser(coffee.newUser)
             .then(function(responseData) {
@@ -17,13 +18,11 @@ function coffeeController(coffeeFactory) {
             }, function(err) {
                 console.error('There was an err ', err);
             });
-
-        //Resets the form
+        //RESETS THE FORM
         coffee.newUser = {};
-
     };
 
-    //Get Menu Information
+    //GET MENU INFORMATION
     coffee.cafeMenu = function() {
         coffeeFactory.getMenu()
             .then(function(responseData) {

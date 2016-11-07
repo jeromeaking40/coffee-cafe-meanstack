@@ -4,7 +4,7 @@ angular.module('CoffeeCafe', ['ngRoute'])
 Router.$inject = ['$routeProvider'];
 
 function Router($routeProvider) {
-    //CONFIGURING Routes
+    //CONFIGURING ROUTES
     $routeProvider
         .when("/", {
             templateUrl: "/views/home.html"
