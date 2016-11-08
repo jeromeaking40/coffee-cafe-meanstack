@@ -4,6 +4,10 @@ body,
 html {
   height: 100%; }
 
+#logo {
+  margin: -3px 5px -3px -3px;
+  display: inline; }
+
 #wrapper {
   min-height: 100%;
   position: relative; }
@@ -129,10 +133,15 @@ li a {
 .fa {
   font-size: 2.5em;
   padding-top: 20px;
-  color: #3a2306;
+  color: #c19d67;
   padding-top: 20px; }
   .fa:hover {
-    color: #FFF; }
+    color: #5e4423; }
+
+.navbar-default .fa {
+  color: #FFF; }
+  .navbar-default .fa:hover {
+    color: #3a2306; }
 
 .inner.container {
   padding-right: 15px;
@@ -239,7 +248,40 @@ input {
   padding: 10px 20px;
   background: #f4f7f8;
   border-radius: 8px;
-  font-family: "Josefin Slab", serif; }
+  font-family: "Josefin Slab", serif;
+  margin-top: 25px; }
+
+.btn-default {
+  padding: 8px 12px;
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px; }
+
+label {
+  display: block;
+  margin-bottom: 8px; }
+
+label.light {
+  font-weight: 300;
+  display: inline; }
+
+.login {
+  color: #3a2306; }
+
+.formlogin {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  font-family: "Josefin Slab", serif;
+  margin-top: 25px; }
 
 .btn-default {
   padding: 8px 12px;

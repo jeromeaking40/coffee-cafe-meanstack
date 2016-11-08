@@ -1,14 +1,10 @@
-var Users = require('../controllers/users');
-var Menu = require('../menu/menu');
+var Users = require('../controllers/users'),
+    Menu = require('../menu/menu'),
+    Auth = require('../controllers/auth'),
+    express = require('express');
+
 
 module.exports = function(app) {
-
-    app.get('/', function(req, res) {
-        res.sendFile('index.html', {
-            root: './public/html'
-        });
-    });
-
     //Get Menu from Server
     app.get('/menu', function(req, res) {
         res.send(Menu);
@@ -16,5 +12,16 @@ module.exports = function(app) {
 
     //Create New Users
     app.post('/register', Users.create);
+
+    //Login Users
+    app.post('/login', Auth.login);
+
+    // anythin below line 14 is protected
+    app.use(Auth.middlewares.session);
+
+    app.get('/profile');
+
+    //Serve Static Files
+    app.use(express.static('public'));
 
 };
