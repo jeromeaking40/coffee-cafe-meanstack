@@ -10,7 +10,7 @@ function coffeeController(coffeeFactory) {
 
     coffee.newUser = {};
 
-    //CREATE NEW USER 
+    //CREATE NEW USER
     coffee.siteRegister = function() {
         coffeeFactory.createUser(coffee.newUser)
             .then(function(responseData) {
@@ -28,7 +28,6 @@ function coffeeController(coffeeFactory) {
             .then(function(responseData) {
                 console.log('Response is', responseData);
                 coffee.menu = responseData.data;
-                console.log(coffee.menu);
             }, function(err) {
                 console.error('There was an err ', err);
 

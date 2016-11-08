@@ -5,21 +5,29 @@ var Users = require('../controllers/users'),
 
 
 module.exports = function(app) {
-    //Get Menu from Server
+
+    //GET MENU FROM SERVER
     app.get('/menu', function(req, res) {
         res.send(Menu);
     });
 
-    //Create New Users
+    //CREATE NEW USERS
     app.post('/register', Users.create);
 
-    //Login Users
+    //LOGIN USERS
     app.post('/login', Auth.login);
 
-    // anythin below line 14 is protected
+    //LOGUT USERS
+    app.get('/logout', Auth.logout);
+
+    //ANYTHING BELOW THIS LINE IS PROTECTED WITH THE MIDDLEWARE
     app.use(Auth.middlewares.session);
 
-    app.get('/profile');
+    //PROFILE PAGE ONCE AUTHENICATED
+    app.get('/profile', Auth.profile);
+
+    //USER INFORMATION ONCE LOGGED IN
+    app.get('/api/me', Auth.me);
 
     //Serve Static Files
     app.use(express.static('public'));

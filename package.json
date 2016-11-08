@@ -13,6 +13,7 @@
     "bcrpyt": "^1.8.7",
     "bcryptjs": "^2.3.0",
     "client-sessions": "^0.7.0",
+    "connect-flash": "^0.1.1",
     "express": "^4.14.0",
     "mongoose": "^4.6.6",
     "morgan": "^1.7.0"

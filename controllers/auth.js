@@ -1,23 +1,23 @@
 var User = require('../models/User'),
     bcrypt = require('bcryptjs');
 
-//Auth Routes
+//AUTH ROUTES
 module.exports = {
-    login: function(req, res) { // POST login
+    login: function(req, res) {
+        // POST login
         console.info('LOGIN::POST::PAYLOAD::', req.body);
 
         User.findOne({
             email: req.body.email
         }, function(err, user) {
-            if (err) { // this will trigger the error .then callback on the frontend
+            if (err) {
+                // this will trigger the error .then callback on the frontend
                 console.error('MongoDB error:', err);
                 res.status(500).json(err);
             }
             if (!user) {
                 console.warn('No user found!');
-                res.status(403).json({
-                    message: 'Invalid username or password'
-                });
+                res.status(403).json({message: 'Invalid username or password'});
             } else {
                 console.info('auth.login', user);
 
@@ -27,14 +27,10 @@ module.exports = {
                         res.status(500).json(err);
                     } else if (!matched) {
                         console.warn('Password mismatch!');
-                        res.status(403).json({
-                            message: 'Invalid username or password'
-                        });
+                        res.status(403).json({message: 'Invalid username or password'});
                     } else {
-                        req.session.userId = user._id;
-                        res.send({
-                            message: 'Login success!'
-                        });
+                        req.session = user;
+                        res.send({message: 'Login success!'});
                         // res.redirect('/profile');
                     }
                 });
@@ -42,19 +38,20 @@ module.exports = {
 
         });
     },
-
     profile: function(req, res) {
-        res.sendFile('/profile');
+        res.sendFile('/profile.html', {
+          root: "./public/views"
+        });
+        req.flash('info', 'Flash is back!');
+
     },
     logout: function(req, res) {
         req.session.reset();
-        res.redirect('/login.html');
+        res.redirect('/views/login.html');
     },
     register: function(req, res) {
         console.log(req.body);
-
         var newUser = new User(req.body);
-
         // when this function fires, it is going to hit the pre save middleware
         newUser.save(function(err, user) {
             if (err) {
@@ -63,9 +60,13 @@ module.exports = {
             res.send(user);
         });
     },
+    me: function (req, res) {
+      res.json(req.session.user);
+    },
     middlewares: {
-        session: function(req, res, next) { // this will be the middleware that checks for a loggedin user
-            if (req.session.userId) {
+        session: function(req, res, next) {
+          // this will be the middleware that checks for a loggedin user
+            if (req.session) {
                 next();
             } else {
                 res.redirect('/login.html');
