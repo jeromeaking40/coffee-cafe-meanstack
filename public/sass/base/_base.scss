@@ -31,3 +31,11 @@ h5 {
     color      : $hover-color;
     font-family: $stack-joseph;
 }
+
+.logout {
+    color: $primary-color;
+
+    &:hover {
+        color: $hover-color;
+    }
+}

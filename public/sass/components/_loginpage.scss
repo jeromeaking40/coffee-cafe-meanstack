@@ -6,6 +6,14 @@
     background-color: $primary-color;
 }
 
+.recover {
+    color: $secondary-color;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
 .formlogin {
     max-width    : 300px;
     margin       : 10px auto;
@@ -27,6 +35,14 @@
     border-width : 1px 1px 3px;
     box-shadow   : 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
+}
+
+.registerredirect {
+    color: $secondary-color;
+
+    &:hover {
+        color: $primary-color;
+    }
 }
 
 label {

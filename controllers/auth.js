@@ -1,12 +1,13 @@
 var User = require('../models/User'),
-    bcrypt = require('bcryptjs');
+    bcrypt = require('bcryptjs'),
+      sessions = require('client-sessions'),
+      flash = require('connect-flash');
 
 //AUTH ROUTES
 module.exports = {
     login: function(req, res) {
         // POST login
         console.info('LOGIN::POST::PAYLOAD::', req.body);
-
         User.findOne({
             email: req.body.email
         }, function(err, user) {
@@ -17,6 +18,7 @@ module.exports = {
             }
             if (!user) {
                 console.warn('No user found!');
+                req.flash('logininMessage', 'No user found!');
                 res.status(403).json({message: 'Invalid username or password'});
             } else {
                 console.info('auth.login', user);
@@ -42,11 +44,10 @@ module.exports = {
         res.sendFile('/profile.html', {
           root: "./public/views"
         });
-        req.flash('info', 'Flash is back!');
-
     },
     logout: function(req, res) {
         req.session.reset();
+        req.flash('info', 'Flash is back!');
         res.redirect('/views/login.html');
     },
     register: function(req, res) {

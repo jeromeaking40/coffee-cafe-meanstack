@@ -27,6 +27,11 @@ h5 {
   color: #3a2306;
   font-family: "Josefin Slab", serif; }
 
+.logout {
+  color: #D2B48C; }
+  .logout:hover {
+    color: #3a2306; }
+
 h1 {
   font-family: "Graduate", cursive; }
 
@@ -277,6 +282,11 @@ label.light {
 .loginform {
   background-color: #D2B48C; }
 
+.recover {
+  color: #5e4423; }
+  .recover:hover {
+    color: #D2B48C; }
+
 .formlogin {
   max-width: 300px;
   margin: 10px auto;
@@ -297,6 +307,11 @@ label.light {
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px; }
+
+.registerredirect {
+  color: #5e4423; }
+  .registerredirect:hover {
+    color: #D2B48C; }
 
 label {
   display: block;

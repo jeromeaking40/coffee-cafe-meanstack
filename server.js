@@ -20,11 +20,11 @@ var express = require('express'),
 
 var app = express();
 
-app.use(flash());
 
 //Middleware
 app.use(morgan('dev'));
 app.use(sessions);
+app.use(flash());
 app.use(bodyParser.urlencoded({
     extended: true
 }), bodyParser.json());
