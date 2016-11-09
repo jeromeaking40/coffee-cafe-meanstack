@@ -29,7 +29,9 @@ module.exports = function(app) {
     //USER INFORMATION ONCE LOGGED IN
     app.get('/api/me', Auth.me);
 
-    //Serve Static Files
+    app.get('/checklogin', Auth.checklogin);
+
+    //SERVE STATIC FILES
     app.use(express.static('public'));
 
 };

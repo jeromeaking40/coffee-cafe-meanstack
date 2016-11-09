@@ -61,7 +61,14 @@ module.exports = {
         });
     },
     me: function (req, res) {
-      res.json(req.session.user);
+      res.json(req.session);
+    },
+    checklogin:  function (req, res){
+      if(req.user){
+        res.send(true);
+      } else {
+        res.send(false);
+      }
     },
     middlewares: {
         session: function(req, res, next) {

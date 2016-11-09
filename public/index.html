@@ -13,6 +13,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
         <script src="/js/module.coffee.js"></script>
+        <script src="/js/module.login.js"></script>
         <script src="/js/controller.coffee.js"></script>
         <script src="/js/factory.coffee.js"></script>
     </head>
@@ -35,7 +36,7 @@
                     <a href="/views/login.html">LOG IN</a>
                 </li>
                 <li>
-                    <a href="#/register">REGISTER</a>
+                    <a href="#/register" ng-hide="loggedIn" ng-click="isLoggedIn()">REGISTER</a>
                 </li>
             </ul>
             <!--END OF NAV-->

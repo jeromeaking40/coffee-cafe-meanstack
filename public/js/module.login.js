@@ -23,24 +23,22 @@ angular.module('module.login', [])
             });
         };
 
-        //GET INFORMATION ONCE USER LOGS IN
-        login.info = function() {
-            console.log(login);
-            $http({
-                method: 'GET',
-                url: '/api/me',
-                data: {
-                    email: login.email
-                }
-            }).then(function(res) {
-                console.info(res.data);
-                login.profile = res.data;
-            }, function(err) {
-                // DO NOT FORGET!!!! an error callback
-                // when things go bad, you need this!!!!!!!!
-                console.error(err);
-            });
-        };
+    login.loggedIn = false;
+
+    login.isLoggedIn = function() {
+      $http.get('/checklogin')
+        .success(function(data) {
+          console.log(data);
+          if (data === true)
+            login.loggedIn = true;
+          else
+            login.loggedIn = false;
+        })
+        .error(function(data) {
+          console.log('error: ' + data);
+        });
+    };
+      
 
     }
 ]);
