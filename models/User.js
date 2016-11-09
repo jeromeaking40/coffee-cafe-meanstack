@@ -19,7 +19,9 @@ var UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+  resetPasswordToken: String,
+  resetPasswordExpires: Date
 });
 
 
@@ -27,7 +29,7 @@ var UserSchema = new mongoose.Schema({
 UserSchema.pre('save', function(next) {
     var user = this; // new User(req.body);
 
-    // user.email = user.email.toLowerCase();
+    user.email = user.email.toLowerCase();
 
     // only hash the password if modified or a new user
     if (!user.isModified('password')) {

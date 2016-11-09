@@ -14,20 +14,14 @@
   </head>
 
   <body class="loginform" ng-controller="controller.login as login">
-    <!--LOGIN FORM-->
-    <h1 class="text-center login"><img id="logo" src="/img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</h1>
-    <form class="formlogin" ng-submit="login.submit()">
-      <legend class="text-center"> Log In</legend>
+  <!--LOGIN FORM-->
+  <h1 class="text-center login"><img id="logo" src="/img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</h1>
+  <form class="formlogin" ng-submit="login.passwordReset()">
+    <legend class="text-center"> RESET</legend>
 
-        <label for="email">Email</label>
-        <input class="form-control" type="email" ng-model="login.email" placeholder=" Enter your email.."><br>
-
-        <label for="password">Password</label>
-        <input class="form-control" type="password" ng-model="login.password" placeholder="Enter your password..">
-
-        <button class="btn btn-default login" type="submit">Log In</button>
-        <a class="text-center recover" href="/views/forgot.html">Recover Password</a><hr>
-        <a href="/#/register"><h5 class="registerredirect">Haven't registered? Sign up for a account</h5></a>
+      <label for="email">Email</label>
+      <input class="form-control" type="email" ng-model="login.email" placeholder=" Enter your email.."><br>
+      <button class="btn btn-default login" type="submit">Reset Password</button>
     </form>
   </body>
 </html>

@@ -1,5 +1,5 @@
-angular.module('module.login', [])
-.controller('controller.login', ['$http',
+angular.module('module.login', []).controller('controller.login', [
+    '$http',
     function($http) {
         var login = this;
 
@@ -23,22 +23,27 @@ angular.module('module.login', [])
             });
         };
 
-    login.loggedIn = false;
+        //GET RESET PAGE
+        login.passwordReset = function() {
+            console.log('Made it to the http post');
+            $http({
+                method: 'POST',
+                url: '/forgot',
+                data: {
+                    email: login.email
+                }
+            }).then(function(res) {
+                console.info(res.data);
+                location.href = '/#/forgot';
+            }, function(err) {
+                // DO NOT FORGET!!!! an error callback
+                // when things go bad, you need this!!!!!!!!
+                console.error(err);
+            });
 
-    login.isLoggedIn = function() {
-      $http.get('/checklogin')
-        .success(function(data) {
-          console.log(data);
-          if (data === true)
-            login.loggedIn = true;
-          else
-            login.loggedIn = false;
-        })
-        .error(function(data) {
-          console.log('error: ' + data);
-        });
-    };
-      
+            login.email = "";
+        };
+
 
     }
 ]);

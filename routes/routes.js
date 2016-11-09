@@ -16,6 +16,7 @@ module.exports = function(app) {
 
     //LOGIN USERS
     app.post('/login', Auth.login);
+    app.post('/forgot', Auth.forgot);
 
     //LOGUT USERS
     app.get('/logout', Auth.logout);
