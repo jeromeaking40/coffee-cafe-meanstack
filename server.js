@@ -5,8 +5,8 @@ var express = require('express'),
     nodemailer = require('nodemailer'),
     async = require('async'),
     bcrypt = require('bcryptjs'),
-    flash = require('connect-flash'),
     crypto = require('crypto'),
+    colors = require('colors'),
     Routes = require('./routes/routes.js'),
     sessions = require('client-sessions')({
         cookieName: "coffeeclub-session", // front-end cookie name, currently pulled from package.json, feel free to change
@@ -26,7 +26,6 @@ var app = express();
 //Middleware
 app.use(morgan('dev'));
 app.use(sessions);
-app.use(flash());
 app.use(bodyParser.urlencoded({extended: true}), bodyParser.json());
 
 //Set Mongoose Connection

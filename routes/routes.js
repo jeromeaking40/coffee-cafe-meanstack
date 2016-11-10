@@ -18,6 +18,10 @@ module.exports = function(app) {
     app.post('/login', Auth.login);
     app.post('/forgot', Auth.forgot);
 
+    //GET RESET PAGE
+    app.get('/reset', Auth.reset);
+    app.post('/reset/:token', Auth.token);
+
     //LOGUT USERS
     app.get('/logout', Auth.logout);
 
@@ -30,7 +34,6 @@ module.exports = function(app) {
     //USER INFORMATION ONCE LOGGED IN
     app.get('/api/me', Auth.me);
 
-    app.get('/checklogin', Auth.checklogin);
 
     //SERVE STATIC FILES
     app.use(express.static('public'));

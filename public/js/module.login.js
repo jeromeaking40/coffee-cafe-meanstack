@@ -23,9 +23,28 @@ angular.module('module.login', []).controller('controller.login', [
             });
         };
 
+        //RESET PASSWORD from PASSWORD LINK
+        login.resetNewPassword = function() {
+            console.log(login);
+            $http({
+                method: 'POST',
+                url: '/reset/:token',
+                data: {
+                    email: login.email,
+                    password: login.password
+                }
+            }).then(function(res) {
+                console.info(res.data);
+                location.href = '/#/reset';
+            }, function(err) {
+                // DO NOT FORGET!!!! an error callback
+                // when things go bad, you need this!!!!!!!!
+                console.error(err);
+            });
+        };
+
         //GET RESET PAGE
         login.passwordReset = function() {
-            console.log('Made it to the http post');
             $http({
                 method: 'POST',
                 url: '/forgot',
