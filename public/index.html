@@ -6,12 +6,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Graduate|Josefin+Slab|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+        <!-- Bootstrap theme -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
         <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
         <link rel="shortcut icon" href="/css/coffeecafe.ico" type="image/x-icon">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+        <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
         <script src="/js/module.coffee.js"></script>
         <script src="/js/module.login.js"></script>
         <script src="/js/controller.coffee.js"></script>
@@ -21,51 +26,21 @@
     <body ng-controller='coffeeCtrl as coffee'>
         <!--NAV-->
         <div id="wrapper">
-            <a class="navbar-brand" href="#/"> <img id="logo" src="img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</a>
-            <ul class="nav nav-pills nav-justified">
-                <li>
-                    <a href="#/menu">MENU</a>
-                </li>
-                <li>
-                    <a href="#/about">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#/contact">CONTACT</a>
-                </li>
-                <li>
-                    <a href="/views/login.html">LOG IN</a>
-                </li>
-                <li>
-                    <a href="#/register" ng-hide="loggedIn" ng-click="isLoggedIn()">REGISTER</a>
-                </li>
-            </ul>
-            <!--END OF NAV-->
+
+          <!--NAVIGATION-->
+            <ng-include src="'views/navbar.html'"></ng-include>
+            <!--END OF NAVIGATION-->
 
             <!--PAGE CONTENT-->
             <div id="content">
                 <ng-view></ng-view>
-                <!--END OF PAGE CONTENT-->
             </div>
+            <!--END OF PAGE CONTENT-->
 
-            <!-- FOOTER -->
-            <div id="footer">
-                <footer class="navbar-default">
-                    <div class="container-fluid text-center">
-                        <h5>COFFEE CAFE, WEST TOWN WICKER PARK, 1234 N MILWAUKEE AVE, CHICAGO,IL UNITED STATES 123-456-7890 INFO@COFFEECAFE.COM</h5>
-                        <h5>Designed and Developed by Jerome King</h5>
-                        <a href="http://www.github.com/jeromeaking40">
-                            <i class="fa fa-github"></i>
-                        </a>
-                        <a href="http://www.linkedin.com/in/jerome-king-7b6b8a92">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:jeromeaking40@yahoo.com">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </div>
-                </footer>
-            </div>
+            <!--FOOTER-->
+            <ng-include src="'views/footer.html'"></ng-include>
             <!--END OF FOOTER-->
+
         </div>
     </body>
 </html>

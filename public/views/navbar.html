@@ -1,0 +1,43 @@
+<!--NAV -->
+<nav class="navbar navbar-fixed-top">
+
+<a class="navbar-brand" href="#/">
+    <img id="logo" src="img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</a>
+
+<div ng-switch="coffee.signedIn">
+  <!--NOT LOGGED IN NAV-->
+      <ul class="nav nav-pills nav-justified" ng-switch-default>
+        <li>
+            <a href="#/menu">MENU</a>
+        </li>
+        <li>
+            <a href="#/about">ABOUT</a>
+        </li>
+        <li>
+            <a href="#/contact">CONTACT</a>
+        </li>
+        <li>
+            <a href="/views/login.html">LOG IN</a>
+        </li>
+        <li>
+            <a href="#/register">REGISTER</a>
+        </li>
+    </ul>
+    <!--END OF NAV-->
+
+    <!--LOGGED IN NAV-->
+    <ul class="nav nav-pills nav-justified" ng-switch-when="true">
+        <li>
+            <a href="/#/profile">ACCOUNT INFO</a>
+        </li>
+        <li>
+            <a href="#/menu">MENU</a>
+        </li>
+        <li>
+            <a href="#/contact">CONTACT</a>
+        </li>
+    </ul>
+    <!-- END OF LOGGED IN NAV -->
+</div>
+</nav>
+<!--END OF NAV-->

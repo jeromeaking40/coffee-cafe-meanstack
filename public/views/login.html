@@ -6,16 +6,22 @@
     <link rel="shortcut icon" href="/css/coffeecafe.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Graduate|Josefin+Slab|Pacifico" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+      <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="/js/module.login.js"></script>
   </head>
 
   <body class="loginform" ng-controller="controller.login as login">
     <!--LOGIN FORM-->
-    <h1 class="text-center login"><img id="logo" src="/img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</h1>
+
+    <a href="/"><h1 class="text-center login"><img id="logo" src="/img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</h1></a>
     <form class="formlogin" ng-submit="login.submit()">
       <legend class="text-center"> Log In</legend>
 

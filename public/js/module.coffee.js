@@ -21,6 +21,10 @@ function Router($routeProvider) {
         .when("/menu", {
             templateUrl: "/views/menu.html"
         })
+        .when("/reset/:token", {
+            templateUrl: "/views/reset.html",
+            controller: "coffeeCtrl"
+        })
         .when("/profile", {
             templateUrl: "/views/profile.html"
         })

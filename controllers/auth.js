@@ -117,14 +117,16 @@ module.exports = {
             }
         }, function(err, user) {
             if (!user) {
+                console.log(err);
                 res.send('error', 'Password reset token is invalid or has expired.');
-                return res.redirect('/forgot');
+                return res.redirect('/views/reset.html');
             }
             res.send('reset', {user: req.user});
         });
     },
     token: function(req, res) {
-        sync.waterfall([
+        console.log('In token', req);
+        async.waterfall([
             function(done) {
                 User.findOne({
                     resetPasswordToken: req.params.token,
@@ -132,19 +134,15 @@ module.exports = {
                         $gt: Date.now()
                     }
                 }, function(err, user) {
-                    if (!user) {
-                        res.send('error', 'Password reset token is invalid or has expired.');
-                        return res.redirect('back');
-                    }
-
                     user.password = req.body.password;
                     user.resetPasswordToken = undefined;
                     user.resetPasswordExpires = undefined;
 
                     user.save(function(err) {
-                        req.logIn(user, function(err) {
-                            done(err, user);
-                        });
+                        if (err) {
+                            return res.send(err);
+                        }
+                        res.send(user);
                     });
                 });
             },
@@ -163,7 +161,7 @@ module.exports = {
                     text: 'Hello,\n\n' + 'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
                 };
                 smtpTransport.sendMail(mailOptions, function(err) {
-                    req.flash('success', 'Success! Your password has been changed.');
+                    res.send('success', 'Success! Your password has been changed.');
                     done(err);
                 });
             }

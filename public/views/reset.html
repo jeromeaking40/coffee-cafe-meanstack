@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html ng-app="module.login">
-  <head>
-    <meta charset="utf-8">
-    <title>CoffeeCafe</title>
-    <link rel="shortcut icon" href="/css/coffeecafe.ico" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Graduate|Josefin+Slab|Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <script src="/js/module.login.js"></script>
-  </head>
 
-  <body class="loginform" ng-controller="controller.login as login">
   <!--LOGIN FORM-->
   <h1 class="text-center login"><img id="logo" src="/img/coffeecafelogo.png" alt="logo" height="22">CoffeeCafe</h1>
 
-  <form class="formlogin" ng-submit="login.resetNewPassword()">
+  <form class="formlogin" ng-submit="coffee.resetNewPassword()">
     <legend class="text-center"> RESET PASSWORD</legend>
 
       <label for="email">Email</label>
-      <input class="form-control" type="email" ng-model="login.email" placeholder=" Enter your email.."><br>
+      <input class="form-control" type="email" ng-model="coffee.email" placeholder=" Enter your email.."><br>
 
-      label for="password">Password</label>
-      <input class="form-control" type="password" ng-model="login.password" placeholder="Enter your password..">
+      <label for="password">Password</label>
+      <input class="form-control" type="password" ng-model="coffee.password" placeholder="Enter your password..">
 
       <button class="btn btn-default login" type="submit">Update Password</button>
     </form>

@@ -20,7 +20,9 @@ module.exports = function(app) {
 
     //GET RESET PAGE
     app.get('/reset', Auth.reset);
-    app.post('/reset/:token', Auth.token);
+
+    //POST NEW PASSWORD
+    app.get('/reset/:token', Auth.token);
 
     //LOGUT USERS
     app.get('/logout', Auth.logout);
