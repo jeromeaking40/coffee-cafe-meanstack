@@ -35,10 +35,10 @@ mongoose.connect('mongodb://localhost/coffeeclub');
 Routes(app);
 
 //Server
-app.listen(3733, function(err, req, res) {
+app.listen(9000, function(err, req, res) {
     if (err) {
         console.error('There was an error: ', err);
         process.exit(1);
     }
-    console.log('Server is running on port 3733');
+    console.log('Server is running on port 9000');
 });
