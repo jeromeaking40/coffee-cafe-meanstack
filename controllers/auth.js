@@ -88,10 +88,10 @@ module.exports = {
             function(token, user, done) {
                 //SET THE SERVICE PROVIDER TO SEND EMAILS
                 var smtpTransport = nodemailer.createTransport('SMTP', {
-                    service: 'Yahoo',
+                    service: 'SendGrid',
                     auth: {
-                        user: 'jeromeaking40',
-                        pass: 'biglos40'
+                        user: 'key',
+                        pass: 'key'
                     }
                 });
                 var mailOptions = {
@@ -148,10 +148,10 @@ module.exports = {
             },
             function(user, done) {
                 var smtpTransport = nodemailer.createTransport('SMTP', {
-                    service: 'Yahoo',
+                    service: 'SendGrid',
                     auth: {
-                        user: 'jeromeaking40',
-                        pass: 'biglos40'
+                        user: 'key',
+                        pass: 'key'
                     }
                 });
                 var mailOptions = {
