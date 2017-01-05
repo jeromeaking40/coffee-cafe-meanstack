@@ -29,7 +29,7 @@ app.use(sessions);
 app.use(bodyParser.urlencoded({extended: true}), bodyParser.json());
 
 //Set Mongoose Connection
-mongoose.connect('mongodb://localhost/coffeeclub');
+mongoose.connect('mongodb://127.0.0.1/coffeeclub');
 
 //Bring in routes
 Routes(app);
